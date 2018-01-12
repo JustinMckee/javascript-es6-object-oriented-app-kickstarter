@@ -10,13 +10,16 @@ Fetch data from these social media accounts:
 ## Getting Started
 ---
 1. Clone the project
-```$ git clone https://github.com/JustinMckee/social-media-wall.git social-media-wall
+```
+git clone https://github.com/JustinMckee/social-media-wall.git social-media-wall
 ```
 2. Navigate into the project directory and install packages
-```$ npm install
+```
+npm install
 ```
 3. Serve with lite-server
-```$ npm run dev
+```
+npm run dev
 ```
 
 @TODO
