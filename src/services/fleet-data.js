@@ -9,7 +9,7 @@ export let fleet = [
   },
   {
     license: 'Y78UI9',
-    type: 'caraef',
+    type: 'car',
     make: 'Tesla',
     model: 'Quick Transport',
     miles: '43400',
@@ -26,7 +26,7 @@ export let fleet = [
   {
     license: 'D9T570',
     type: 'car',
-    make: 'Tesla',
+    make: 'Uber',
     model: 'Turbo Transport',
     miles: '23000',
     latLong: '40.773345 -73.968900'

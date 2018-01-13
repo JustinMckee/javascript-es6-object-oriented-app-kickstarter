@@ -10,7 +10,10 @@
   "author": "Justin McKee",
   "license": "ISC",
   "dependencies": {
-    "es6-module-loader": "^0.17.11",
+    "jquery": "^3.2.1",
+    "material-design-lite": "^1.3.0",
+    "systemjs": "^0.20.19",
+    "systemjs-plugin-traceur": "0.0.3",
     "traceur": "0.0.111"
   },
   "devDependencies": {
