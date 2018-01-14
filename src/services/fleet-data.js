@@ -5,7 +5,7 @@ export let fleet = [
     model: 'Google 3800',
     airTimeHours: '300',
     base: 'New York',
-    latLong: '40.779423 -73.969411'
+    latLong: '40.779423 -73.964411'
   },
   {
     license: 'Y78UI9',
@@ -13,7 +13,7 @@ export let fleet = [
     make: 'Tesla',
     model: 'Quick Transport',
     miles: '43400',
-    latLong: '40.773272 -73.968875'
+    latLong: '40.773272 -73.973875'
   },
   {
     license: 'T7R45U',

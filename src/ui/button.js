@@ -4,6 +4,7 @@ export class Button extends BaseElement{
 
   constructor(title){
     super();
+    this.title = title;
   }
 
   getElementString(){

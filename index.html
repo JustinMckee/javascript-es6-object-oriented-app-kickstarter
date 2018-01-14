@@ -12,14 +12,17 @@
     <!-- @scripts -->
     <script src="/node_modules/traceur/bin/traceur.js"></script><!-- Compiler -->
     <script src="/node_modules/systemjs/dist/system.js"></script><!-- Module loader -->
-    <script src="/node_modules/material-design-lite/dist/material.min.js"></script>
+    <script src="/node_modules/material-design-lite/dist/material.min.js"></script><!-- material JS -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8vdPB14udkJfYv9TINQCzJYJAgb3JupA&callback=appInit"
+    async defer></script>  <!-- maps api -->
 
   </head>
   <body>
     <script>
 
-      /* make jquery a loadable module */
-      // System.paths['jquery'] = './node_modules/jquery/dist/jquery.js';
+    function appInit(){
+      /* make jquery a loadable module with SystemJS */
       System.config({
         map: {
           'jquery': './node_modules/jquery/dist/jquery.js',
@@ -45,7 +48,7 @@
 
       /* bootstrap app */
       System.import('src/app.js');
-
+    }
     </script>
   </body>
 </html>
