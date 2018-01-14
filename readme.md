@@ -15,9 +15,3 @@ npm install
 ```
 npm run dev
 ```
-
-@TODO
-
----
-## How it Works
-@TODO
