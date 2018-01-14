@@ -2,7 +2,7 @@ import {BaseElement} from './base-element.js';
 
 export class Image extends BaseElement{
 
-  constructor(title){
+  constructor(filename){
     super();
     this.filename = filename;
   }

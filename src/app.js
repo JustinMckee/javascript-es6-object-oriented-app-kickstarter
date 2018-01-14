@@ -1,20 +1,37 @@
 import $ from 'jquery';
-import {Car} from './classes/car.js';
-import {Drone} from './classes/drone.js';
 import {fleet} from './services/fleet-data.js';
 import {FleetDataService} from './services/fleet-data-service.js';
-import {Button} from './ui/button.js';
-import {Image} from './ui/image.js';
-import {TitleBar} from './ui/title-bar.js';
-import {DataTable} from './ui/data-table.js';
-import {GoogleMap} from './ui/google-map.js';
+import {HomePage} from './home-page.js';
+import {ApplicationBase} from './framework/application-base.js';
+import {CarsPage} from './cars-page.js';
+import {DronesPage} from './drones-page.js';
+import {MapPage} from './map-page.js';
+
+export class App extends ApplicationBase{
+
+  constructor(){
+    super('Fleet Manager');
+    this.dataService = new FleetDataService();
+    this.dataService.loadData(fleet);
+
+    this.addRoute('Home', new HomePage(), true);
+    this.addRoute('Cars', new CarsPage(), false);
+    this.addRoute('Drones', new DronesPage(), false);
+    this.addRoute('Map', new MapPage(), false);
+  }
+
+}
+
+export let application = new App();
+application.show($('body'));
+
 
 /*
  * @data
  */
 
-let dataService = new FleetDataService();
-dataService.loadData(fleet);
+// let dataService = new FleetDataService();
+// dataService.loadData(fleet);
 
 // console.log(dataService.drones);
 // console.log(dataService.cars);
@@ -48,31 +65,31 @@ dataService.loadData(fleet);
  * @button
  */
 
-let b = new Button('Click Me');
-b.appendToElement($('body'));
+// let b = new Button('Click Me');
+// b.appendToElement($('body'));
 
 /*
  * @title-bar
  */
 
-let tb = new TitleBar('Our Application');
-tb.addLink('Home', '');
-tb.addLink('Link', '');
-tb.appendToElement($('body'));
+// let tb = new TitleBar('Our Application');
+// tb.addLink('Home', '');
+// tb.addLink('Link', '');
+// tb.appendToElement($('body'));
 
 /*
  * @data-table
  */
 
-let headers = "License Make Model Miles".split(' ');
-let dt = new DataTable(headers, dataService.cars);
-dt.appendToElement($('body'));
+// let headers = "License Make Model Miles".split(' ');
+// let dt = new DataTable(headers, dataService.cars);
+// dt.appendToElement($('body'));
 
 /*
  * @map
  */
 
-let centerOfMap = {lat: 40.783661, lng: -73.965883};
-let map = new GoogleMap(centerOfMap, dataService.cars);
-
-map.appendToElement($('body'));
+// let centerOfMap = {lat: 40.783661, lng: -73.965883};
+// let map = new GoogleMap(centerOfMap, dataService.cars);
+//
+// map.appendToElement($('body'));
